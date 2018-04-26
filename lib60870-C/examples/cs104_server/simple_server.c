@@ -190,16 +190,21 @@ asduHandler(void* parameter, IMasterConnection connection, CS101_ASDU asdu)
                         SingleCommand_getState(sc));
 
                 CS101_ASDU_setCOT(asdu, CS101_COT_ACTIVATION_CON);
+                /* hexDump("asduHandler1: asdu=", asdu, sizeof(CS101_ASDU_getCOT)); */
+                hexDump("asduhandler1: ASDU\t", asdu, sizeof(asdu));
             }
             else
                 CS101_ASDU_setCOT(asdu, CS101_COT_UNKNOWN_IOA);
 
+                hexDump("asduhandler2: ASDU\t", asdu, sizeof(asdu));
             InformationObject_destroy(io);
         }
         else
             CS101_ASDU_setCOT(asdu, CS101_COT_UNKNOWN_COT);
 
+            hexDump("asduhandler3: ASDU\t", asdu, sizeof(asdu));
         IMasterConnection_sendASDU(connection, asdu);
+            hexDump("asduhandler4: ASDU\t", asdu, sizeof(asdu));
 
         return true;
     }

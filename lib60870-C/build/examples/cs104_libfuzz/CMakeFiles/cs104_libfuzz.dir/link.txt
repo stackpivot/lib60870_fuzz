@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/cs104_libfuzz.dir/server_libfuzz.c.o  -o cs104_libfuzz -rdynamic ../../src/liblib60870.a -lpthread -lm -lrt 

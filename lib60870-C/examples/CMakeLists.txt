@@ -4,6 +4,7 @@ add_subdirectory(cs101_slave)
 add_subdirectory(cs104_client)
 add_subdirectory(cs104_server)
 add_subdirectory(multi_client_server)
+add_subdirectory(cs104_libfuzz)
 
 if (WITH_MBEDTLS)
 add_subdirectory(tls_client)

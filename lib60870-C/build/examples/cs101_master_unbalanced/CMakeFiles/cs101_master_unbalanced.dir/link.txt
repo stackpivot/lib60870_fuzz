@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/cs101_master_unbalanced.dir/master_example.c.o  -o cs101_master_unbalanced -rdynamic ../../src/liblib60870.a -lpthread -lm -lrt 

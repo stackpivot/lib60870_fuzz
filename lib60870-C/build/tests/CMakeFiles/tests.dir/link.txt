@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/tests.dir/all_tests.c.o CMakeFiles/tests.dir/unity/unity.c.o  -o tests -rdynamic ../src/liblib60870.a -lpthread -lm -lrt 

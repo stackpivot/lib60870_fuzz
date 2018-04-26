@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/cs101_slave.dir/slave_example.c.o  -o cs101_slave -rdynamic ../../src/liblib60870.a -lpthread -lm -lrt 
