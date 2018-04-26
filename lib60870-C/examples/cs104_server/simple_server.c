@@ -112,12 +112,18 @@ interrogationHandler(void* parameter, IMasterConnection connection, CS101_ASDU a
         InformationObject io = (InformationObject) MeasuredValueScaled_create(NULL, 100, -1, IEC60870_QUALITY_GOOD);
 
         CS101_ASDU_addInformationObject(newAsdu, io);
+        hexDump("1 call: newASDU\t", newAsdu, sizeof(CS101_ASDU));
+        hexDump("1 call: InformationObject\t", io, sizeof(InformationObject));
 
         CS101_ASDU_addInformationObject(newAsdu, (InformationObject)
             MeasuredValueScaled_create((MeasuredValueScaled) io, 101, 23, IEC60870_QUALITY_GOOD));
+        hexDump("2 call: newASDU\t", newAsdu, sizeof(CS101_ASDU));
+        hexDump("2 call: InformationObject\t", io, sizeof(InformationObject));
 
         CS101_ASDU_addInformationObject(newAsdu, (InformationObject)
             MeasuredValueScaled_create((MeasuredValueScaled) io, 102, 2300, IEC60870_QUALITY_GOOD));
+        hexDump("3 call: newASDU\t", newAsdu, sizeof(CS101_ASDU));
+        hexDump("3 call: InformationObject\t", io, sizeof(InformationObject));
 
         InformationObject_destroy(io);
 
